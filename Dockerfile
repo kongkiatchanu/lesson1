@@ -1,4 +1,4 @@
-FROM kongkiatchanu/serverlab:firsttry
+FROM alpine:latest
 
 RUN apk update && \
 #    apk add curl && \
