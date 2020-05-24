@@ -1,6 +1,4 @@
 FROM httpd:alpine
-
-RUN mkdir /app
-ENV PROJECT_HOME /app
+RUN apk update && apk add /bin/sh
 
 COPY target/. /usr/local/apache2/htdocs
