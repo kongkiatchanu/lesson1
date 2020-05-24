@@ -1,5 +1,6 @@
 FROM httpd:alpine
 
-WORKDIR /app
+RUN mkdir /app
+ENV PROJECT_HOME /app
 
-COPY index.html /usr/local/apache2/htdocs
+COPY target/. /usr/local/apache2/htdocs
